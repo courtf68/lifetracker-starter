@@ -1,8 +1,17 @@
 #root {
   display: flex;
   flex-direction: column;
-  background-color: rgb(253, 221, 253);
+  background-color: rgb(33, 91, 135);
+  min-height: 100vh;
 }
+
+/* #box1 {ß
+  flex-grow: 1;
+} */
+
+/* #box2 {
+  flex-grow: 1;
+} */
 
 /* .App {
   text-align: center;

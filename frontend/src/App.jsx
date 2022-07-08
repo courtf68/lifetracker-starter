@@ -9,10 +9,15 @@ import Container from "@mui/material/Container";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Container maxWidth="sm">my container</Container>
-    </div>
+      <Container
+        maxWidth={false}
+        sx={{ backgroundColor: "LavenderBlush", flexGrow: 0 }}
+      >
+        my container
+      </Container>
+    </>
 
     /* //   <div className="App">
     //     <header className="App-header">
