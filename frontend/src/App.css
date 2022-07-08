@@ -1,4 +1,10 @@
-.App {
+#root {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(253, 221, 253);
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -39,4 +45,4 @@
 
 button {
   font-size: calc(10px + 2vmin);
-}
+} */
