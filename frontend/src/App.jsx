@@ -6,18 +6,50 @@ import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+//import { authContextProvider, useAuthContext } from "./auth";
+import LandingPage from "./components/Landing/LandingPage";
+import LoginForm from "./components/Login/LoginForm";
+import LoginPage from "./components/Login/LoginPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RegisterPage from "./components/Register/RegisterPage";
+import RegisterForm from "./components/Register/RegisterForm";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Container
-        maxWidth={false}
-        sx={{ backgroundColor: "LavenderBlush", flexGrow: 0 }}
-      >
-        my container
-      </Container>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/login"
+          element={
+            <>
+              <LoginForm />
+              <LoginPage />
+            </>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <>
+              <RegisterForm />
+              <RegisterPage />
+            </>
+          }
+        />
+        <Route path="/nutrition" element={<LandingPage />} />
+      </Routes>
+
+      <>
+        <Navbar />
+        <Container
+          maxWidth={false}
+          sx={{ backgroundColor: "LavenderBlush", flexGrow: 0 }}
+        >
+          my container
+        </Container>
+      </>
+    </BrowserRouter>
 
     /* //   <div className="App">
     //     <header className="App-header">
