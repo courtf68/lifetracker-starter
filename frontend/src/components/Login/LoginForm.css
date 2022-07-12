@@ -1,5 +1,66 @@
-.txtspace {
-  /* margin-top: 1000px; */
-  /* padding-top: 50px; */
-  background-color: rgb(218, 183, 226);
+.Login {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  justify-content: center;
+  font-size: larger;
+  text-align: center;
+}
+
+.Login .card {
+  outline: 10px black solid;
+  min-height: 600px;
+  width: 600px;
+  padding: 24px 36px 0;
+  flex-direction: column;
+}
+
+.Login h2 {
+  color: aliceblue;
+  font-weight: 450;
+}
+.Login .btn {
+  width: 20%;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  /* display: flex; */
+  align-items: center;
+  margin-top: 8px;
+  justify-content: center;
+  background-color: aquamarine;
+  /* border: none; */
+  cursor: pointer;
+}
+/* .Login .card .form .input-field {
+  margin: 8px 0;
+} */
+
+.Login .card .error {
+  color: var(--bright-red);
+}
+/* test this ^ */
+
+.Login .card .footer {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 100%;
+}
+
+.Login .footer a {
+  color: aquamarine;
+}
+
+.Login .input-field input {
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  border: solid 1px var(--border-color);
+  width: 100%;
 }
