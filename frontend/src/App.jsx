@@ -13,21 +13,14 @@ import LoginPage from "./components/Login/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from "./components/Register/RegisterPage";
 import RegisterForm from "./components/Register/RegisterForm";
+import NutritionPage from "./components/Nutrition/NutritionPage";
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route
-          path="/login"
-          element={
-            <>
-              <LoginForm />
-              <LoginPage />
-            </>
-          }
-        />
         <Route
           path="/register"
           element={
@@ -37,17 +30,25 @@ function App() {
             </>
           }
         />
-        <Route path="/nutrition" element={<LandingPage />} />
+        <Route
+          path="/login"
+          element={
+            <>
+              <LoginForm />
+              <LoginPage />
+            </>
+          }
+        />
+        <Route path="/nutrition" element={<NutritionPage />} />
       </Routes>
 
       <>
-        <Navbar />
-        <Container
+        {/* <Container
           maxWidth={false}
           sx={{ backgroundColor: "LavenderBlush", flexGrow: 0 }}
         >
           my container
-        </Container>
+        </Container> */}
       </>
     </BrowserRouter>
 

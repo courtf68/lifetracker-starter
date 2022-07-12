@@ -1,10 +1,12 @@
 // ...other imports
-// import TextField from "@mui/joy/TextField";
+
+import TextField from "@mui/joy/TextField";
+import "../Login/LoginForm.css";
 
 function LoginForm() {
   return (
-    <div>
-      {/* <TextField
+    <div className="txtspace">
+      <TextField
         // html input attribute
         name="email"
         type="email"
@@ -17,7 +19,7 @@ function LoginForm() {
         type="password"
         placeholder="password"
         label="Password"
-      /> */}
+      />
     </div>
   );
 }

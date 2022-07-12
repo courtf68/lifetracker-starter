@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { NavLink } from "react-router-dom";
+import LoginPage from "../Login/LoginPage";
+import "../Navbar/Navbar.css";
 
 export default function Navbar() {
   return (
@@ -22,9 +25,41 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            <div className="navbar">
+              <ul>
+                <div className="logo">
+                  <a href="/">
+                    <img src="https://codepath-student-store-demo.surge.sh/assets/codepath.f1b3e41a.svg " />
+                  </a>
+                </div>
+                <li>
+                  <a href="/">Activity</a>
+                </li>
+                <li>
+                  <a href="/">Exercise</a>
+                </li>
+                <li>
+                  <a href="/">Nutrition</a>
+                </li>
+                <li>
+                  <a href="/">Sleep</a>
+                </li>
+
+                <li>
+                  <a href="/login" className="login">
+                    Login
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* <ul>
+              <li><NavLink to "/">Home</Navlink></li>
+            </ul> */}
           </Typography>
-          <Button color="inherit">Login</Button>
+          {/* <div><ul>
+            <li> <NavLink to "/"> Home </NavLink></li>
+            </ul></div> */}
+          <Button color="inherit">Sign Up</Button>
         </Toolbar>
       </AppBar>
     </Box>
