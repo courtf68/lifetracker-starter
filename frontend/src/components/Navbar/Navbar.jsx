@@ -34,7 +34,7 @@ export default function Navbar() {
                   </a>
                 </div>
                 <li>
-                  <a href="/">Activity</a>
+                  <a href="/activity">Activity</a>
                 </li>
                 <li>
                   <a href="/">Exercise</a>

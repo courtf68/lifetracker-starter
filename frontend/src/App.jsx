@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from "./components/Register/RegisterPage";
 import RegisterForm from "./components/Register/RegisterForm";
 import NutritionPage from "./components/Nutrition/NutritionPage";
+import Activity from "./components/Activity/Activity";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             </>
           }
         />
+        <Route path="/activity" element={<Activity />} />
         <Route path="/nutrition" element={<NutritionPage />} />
       </Routes>
 

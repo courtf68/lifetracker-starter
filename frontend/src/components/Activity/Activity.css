@@ -1,0 +1,33 @@
+.top h1 {
+  color: aliceblue;
+}
+.top {
+  display: flex;
+  display: inline;
+  padding: 10px;
+
+  /* outline: black 10px solid; */
+}
+.top button {
+  padding: 10px;
+  margin: 3px;
+}
+#orange {
+  color: orange;
+  border-color: orange;
+}
+
+#turq {
+  color: turquoise;
+  border-color: turquoise;
+}
+
+#purombre {
+  color: plum;
+  /* actually make ombre lol */
+  border-color: plum;
+}
+
+h2 {
+  color: aliceblue;
+}

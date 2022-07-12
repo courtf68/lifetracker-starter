@@ -12,7 +12,7 @@
 }
 
 .Login .card {
-  outline: 10px black solid;
+  outline: 2px black dotted;
   min-height: 600px;
   width: 600px;
   padding: 24px 36px 0;
