@@ -33,3 +33,9 @@ li a:hover {
 .logo {
   float: right;
 }
+
+.signUp {
+  background-color: aquamarine;
+  color: #111111;
+  /* css isnt working on mui here */
+}

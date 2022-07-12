@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
 import LoginPage from "../Login/LoginPage";
 import "../Navbar/Navbar.css";
+import LandingPage from "../Landing/LandingPage";
 
 export default function Navbar() {
   return (
@@ -59,7 +60,9 @@ export default function Navbar() {
           {/* <div><ul>
             <li> <NavLink to "/"> Home </NavLink></li>
             </ul></div> */}
-          <Button color="inherit">Sign Up</Button>
+          <Button color="inherit" className="signUp">
+            Sign Up
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
