@@ -124,7 +124,7 @@ export default function RegisterForm({ setAppState }) {
               <input
                 type="text"
                 name="username"
-                placeholder="your_username"
+                placeholder="your username"
                 value={form.username}
                 onChange={handleOnInputChange}
               />
