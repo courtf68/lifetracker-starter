@@ -15,6 +15,8 @@ import RegisterPage from "./components/Register/RegisterPage";
 import RegisterForm from "./components/Register/RegisterForm";
 import NutritionPage from "./components/Nutrition/NutritionPage";
 import Activity from "./components/Activity/Activity";
+import Exercise from "./components/Exercise/Exercise";
+import Sleep from "./components/Sleep/Sleep";
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
           }
         />
         <Route path="/activity" element={<Activity />} />
+        <Route path="/exercise" element={<Exercise />} />
+        <Route path="/sleep" element={<Sleep />} />
         <Route path="/nutrition" element={<NutritionPage />} />
       </Routes>
 

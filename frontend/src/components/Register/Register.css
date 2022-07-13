@@ -1,0 +1,67 @@
+.Register .btn {
+  width: 50%;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  /* display: flex; */
+  align-items: center;
+  margin-top: 8px;
+  justify-content: center;
+  background-color: aquamarine;
+  /* border: none; */
+  cursor: pointer;
+}
+
+.Register {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  justify-content: center;
+  font-size: larger;
+  text-align: center;
+}
+
+.Register .card {
+  outline: 2px black dotted;
+  min-height: 700px;
+  width: 600px;
+  padding: 24px 36px 0;
+  flex-direction: column;
+}
+
+.Register h2 {
+  color: aliceblue;
+  font-weight: 450;
+}
+/* .Login .card .form .input-field {
+    margin: 8px 0;
+  } */
+
+.Register .card .error {
+  color: var(--bright-red);
+}
+/* test this ^ */
+
+.Register .card .footer {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 100%;
+}
+
+.Register .footer a {
+  color: aquamarine;
+}
+
+.Register .input-field input {
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  border: solid 1px var(--border-color);
+  width: 100%;
+}

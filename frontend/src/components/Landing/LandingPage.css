@@ -1,19 +1,27 @@
 .landing h1 {
   color: azure;
-  font-size: 50px;
+  font-size: 90px;
   text-align: center;
+  padding-top: 200px;
 }
-
+/* * {
+  outline: 1px navajowhite dotted;
+} */
 .landing p {
   text-align: center;
   color: azure;
-  font-size: 20px;
+  font-size: 30px;
 }
-
+.forImg img {
+  height: 600px;
+  width: 300px;
+  position: absolute;
+  padding-left: 420px;
+}
 .track-items li {
   display: flex;
-  padding: 10px;
-  padding-left: 100px;
+  padding: 2px;
+  padding-left: 234px;
   /* fix spacing in full screen^ */
   list-style-type: none;
   /* align-items: center; */
@@ -27,4 +35,8 @@
   width: 50%;
   display: flex;
   /* position: absolute; */
+}
+
+.track-items {
+  padding-top: 250px;
 }
