@@ -32,11 +32,14 @@ class User {
     const user = await User.fetchUserByEmail(credentials.email);
 
     if (user) {
-      const isValid = await bcrypt.compare(credentials.password, user.password);
+      const isValid = credentials.password === user.password;
+      // bcrypt.compare(credentials.password, user.password);
       if (isValid) {
         return this.makePublicUser(user);
       }
     }
+    console.log(credentials.password);
+    console.log(user.password);
 
     throw new UnauthorizedError("Invalid email/password combo");
   }

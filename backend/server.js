@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3001;
+
 const bcrypt = require("bcrypt");
 const auth = require("./routes/auth");
 const morgan = require("morgan");
