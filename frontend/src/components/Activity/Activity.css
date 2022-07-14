@@ -1,16 +1,21 @@
 .top h1 {
   color: aliceblue;
+  margin-right: 600px;
 }
 .top {
   display: flex;
-  display: inline;
-  padding: 10px;
-
+  /* display: inline; */
+  /* padding: 10px; */
+  flex: auto;
+  margin-top: 50px;
+  /* justify-content: space-evenly; */
   /* outline: black 10px solid; */
 }
 .top button {
-  padding: 10px;
+  /* padding: 6px; */
   margin: 3px;
+  font-size: 16px;
+  /* margin-bottom: 10px; */
 }
 #orange {
   color: orange;
@@ -27,7 +32,58 @@
   /* actually make ombre lol */
   border-color: plum;
 }
+#orangeb {
+  background-color: orange;
+  color: aliceblue;
+}
+#turqb {
+  background-color: turquoise;
+  color: aliceblue;
+}
+#purombreb {
+  color: aliceblue;
+  background-color: plum;
+}
 
 h2 {
   color: aliceblue;
+}
+
+.sumStat {
+  width: 370px;
+  height: 220px;
+  font-size: 16px;
+}
+.smolStat {
+  width: 370px;
+  height: 120px;
+  font-size: 16px;
+}
+.sumStat p {
+  margin-left: 6px;
+}
+
+.stats {
+  display: flex;
+  margin-top: 15px;
+  grid-gap: 15px;
+}
+.mas {
+  display: flex;
+  color: aliceblue;
+  grid-gap: 15px;
+}
+
+.content {
+  margin-left: 200px;
+  margin-right: 50px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.red {
+  background-color: brown;
+}
+.brightred {
+  background-color: crimson;
 }
