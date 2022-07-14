@@ -61,7 +61,8 @@ export default function Navbar() {
             <li> <NavLink to "/"> Home </NavLink></li>
             </ul></div> */}
           <Button color="inherit" className="signUp">
-            Sign Up
+            <a href="/register"> Sign Up</a>
+            {/* Sign Up */}
           </Button>
         </Toolbar>
       </AppBar>

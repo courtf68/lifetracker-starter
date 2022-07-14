@@ -7,7 +7,7 @@ export default function Exercise() {
       <h1> Exercise</h1>
 
       <div className="content">
-        <h1>Overview</h1>
+        <h2>Overview</h2>
         <button id="orange">Add Exercise</button>
       </div>
     </div>

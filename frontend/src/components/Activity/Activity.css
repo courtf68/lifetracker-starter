@@ -1,6 +1,7 @@
 .top h1 {
   color: aliceblue;
   margin-right: 600px;
+  font-size: 22;
 }
 .top {
   display: flex;

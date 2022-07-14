@@ -1,7 +1,17 @@
-.content h1 {
+/* .content h1 {
+  color: aliceblue;
+} */
+
+.e > h1 {
+  text-align: center;
+  width: 100%;
+  font-size: 34px;
+  padding: 13px;
+  margin: 0;
+  background-color: cadetblue;
   color: aliceblue;
 }
 
-.e h1 {
-  text-align: center;
+.content h2 {
+  font-size: 30px;
 }

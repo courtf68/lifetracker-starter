@@ -2,7 +2,7 @@ import "../Nutrition/Nutrition.css";
 
 export default function NutritionPage() {
   return (
-    <div>
+    <div className="n">
       <h1>Nutrition</h1>
       <div className="content"></div>
     </div>
