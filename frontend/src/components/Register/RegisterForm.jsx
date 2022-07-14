@@ -66,7 +66,7 @@ export default function RegisterForm({ setAppState }) {
         username: form.username,
         first_name: form.firstName,
         last_name: form.lastName,
-        email: form.email,
+        // email: form.email,
         password: form.password,
       });
 

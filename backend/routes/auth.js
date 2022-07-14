@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const User = require("../models/users");
+const User = require("../models/user");
 
 router.post("/login", async (req, res, next) => {
   try {
@@ -24,18 +24,18 @@ router.post("/register", async (req, res, next) => {
 
 //ex below
 // middleware that is specific to this router
-router.use((req, res, next) => {
-  console.log("Time: ", Date.now());
-  next();
-});
-// define the home page route
-router.get("/", (req, res) => {
-  res.send("Birds home page");
-});
-// define the about route
-router.get("/about", (req, res) => {
-  res.send("About birds");
-});
+// router.use((req, res, next) => {
+//   console.log("Time: ", Date.now());
+//   next();
+// });
+// // define the home page route
+// router.get("/", (req, res) => {
+//   res.send("Birds home page");
+// });
+// // define the about route
+// router.get("/about", (req, res) => {
+//   res.send("About birds");
+// });
 
 module.exports = router;
 //https://expressjs.com/en/guide/routing.html
