@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 const auth = require("./routes/auth");
 const morgan = require("morgan");
 const cors = require("cors"); //fixes posty issues
+const { extractUserFromJwt } = require("./security");
 
 const { NotFoundError } = require("./utils/errors");
 
@@ -26,10 +27,13 @@ app.use((err, req, res, next) => {
   });
 });
 //err
+//
 app.use((req, res, next) => {
   return next(new NotFoundError());
 });
-
+//app.use((req, res, next) => {
+//   return next(new NotFoundError());
+// });
 // app.get("/", (req, res) => {
 //   res.send("Hello World!");
 // });
@@ -39,5 +43,6 @@ app.use((req, res, next) => {
 // });
 
 app.listen(port, () => {
+  //says port alr in use...? was working earlier
   console.log(`Example app listening on port ${port}`);
 });

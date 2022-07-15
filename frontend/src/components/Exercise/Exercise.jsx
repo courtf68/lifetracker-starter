@@ -1,5 +1,5 @@
 import "../Exercise/Exercise.css";
-import "../Activity/Activity.css";
+// import "../Activity/Activity.css";
 
 export default function Exercise() {
   return (
@@ -7,8 +7,12 @@ export default function Exercise() {
       <h1> Exercise</h1>
 
       <div className="content">
-        <h2>Overview</h2>
-        <button id="orange">Add Exercise</button>
+        <div className="top">
+          <h2>Overview</h2>
+          <button className="left" id="orange">
+            Add Exercise
+          </button>
+        </div>
       </div>
     </div>
   );

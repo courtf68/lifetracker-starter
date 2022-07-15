@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "../Register/Register.css";
 
-export default function RegisterForm({ setAppState }) {
+export default function RegisterForm() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -64,16 +64,16 @@ export default function RegisterForm({ setAppState }) {
       const res = await axios.post("http://localhost:3001/auth/register", {
         email: form.email,
         username: form.username,
-        first_name: form.firstName,
-        last_name: form.lastName,
+        firstName: form.firstName,
+        lastName: form.lastName,
         // email: form.email,
         password: form.password,
       });
 
       if (res?.data?.user) {
-        setAppState(res.data);
+        // setAppState(res.data);
         setIsLoading(false);
-        navigate("/portal");
+        navigate("/activity");
       } else {
         setErrors((e) => ({
           ...e,

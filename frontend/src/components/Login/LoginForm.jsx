@@ -41,6 +41,7 @@ export default function LoginForm({ user, setUser }) {
       //FIXME^ / see ab this
       if (res?.data?.user) {
         setUser(res.data.user);
+        console.log("in if 1");
       } else {
         setErrors((e) => ({
           ...e,
@@ -139,3 +140,6 @@ export default function LoginForm({ user, setUser }) {
 // }
 // export default LoginForm;
 // //https://mui.com/joy-ui/getting-started/tutorial/#building-the-login-page
+
+//backend is not sending user as response
+//console log on both ends
