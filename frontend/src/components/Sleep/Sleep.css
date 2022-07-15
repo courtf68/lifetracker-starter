@@ -38,8 +38,12 @@
 }
 
 .s .form button {
-  padding: 10px;
+  /* padding: 8px; */
   width: 15%;
+}
+.addSleep h2 {
+  align-items: center;
+  /* padding-left: 600px; */
 }
 
 /* .input {
@@ -54,8 +58,13 @@
   color: white;
   text-align: center;
   /* padding: 16px; */
+  font-size: 20px;
 }
 
 #larger {
   font-size: 20px;
+}
+
+.InputField {
+  padding: 10px;
 }

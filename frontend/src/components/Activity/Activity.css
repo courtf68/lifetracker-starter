@@ -43,7 +43,12 @@
   color: aliceblue;
 }
 #turqb {
-  background-color: turquoise;
+  background: rgb(173, 233, 218);
+  background: linear-gradient(
+    90deg,
+    rgba(173, 233, 218, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   color: aliceblue;
 }
 #purombreb {
@@ -122,7 +127,8 @@ h2 {
 }
 .bolder {
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 54px;
+  text-align: center;
 }
 .sumStat p,
 .smolStat p {

@@ -34,12 +34,15 @@ export default function Activity() {
           <div className="sumStat" id="purombreb">
             <p>Avg Sleep Hours</p>
             <p className="bolder">
-              <b>8.6</b>
+              <b>8.620</b>
             </p>
           </div>
           {/* block 3*/}
           <div className="sumStat" id="turqb">
             <p>Avg Daily Calories</p>
+            <p className="bolder">
+              <b>1650.00</b>
+            </p>
           </div>
         </div>
         {/* content block line 3 */}

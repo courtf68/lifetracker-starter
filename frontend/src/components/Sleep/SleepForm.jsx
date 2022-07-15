@@ -9,14 +9,14 @@ export default function SleepForm() {
         <div className="top">
           <h2>Overview</h2>
         </div>
-        <div class="addSleep">
+        <div className="addSleep">
           <h2>Add Sleep</h2>
-          <div class="form">
-            <div>
+          <div className="form">
+            <div className="InputField">
               <label for="startTime">Start Time</label>
               <input type="datetime-local" name="startTime" value=""></input>
             </div>
-            <div class>
+            <div className="InputField">
               <label for="endTime">End Time</label>
               <input type="datetime-local" name="endTime" value=""></input>
             </div>

@@ -25,6 +25,13 @@ router.post("/register", async (req, res, next) => {
     next(err);
   }
 });
+router.post("./sleep/add", async (req, res, next) => {
+  try {
+    console.log("adding sleep");
+  } catch (err) {
+    next(err);
+  }
+});
 
 //ex below
 // middleware that is specific to this router
