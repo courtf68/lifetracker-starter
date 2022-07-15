@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../Login/LoginForm.css";
+import Navbar from "../Navbar/Navbar";
 
 export default function LoginForm({ user, setUser }) {
   const navigate = useNavigate();
@@ -43,7 +44,12 @@ export default function LoginForm({ user, setUser }) {
         setUser(res.data);
         setIsProcessing(false);
         navigate("/portal");
-        console.log("in if 1");
+        <Navbar>
+          <div>
+            <p>logged in</p>
+          </div>
+        </Navbar>;
+        console.log("logged in");
       } else {
         setErrors((e) => ({
           ...e,
