@@ -6,3 +6,9 @@ CREATE TABLE users (
    username     TEXT NOT NULL UNIQUE,
    password     TEXT NOT NULL
 );
+CREATE TABLE sleep (
+    id SERIAL PRIMARY KEY,
+    startTime TIMESTAMP NOT NULL,
+    endTime TIMESTAMP NOT NULL,
+ 
+);

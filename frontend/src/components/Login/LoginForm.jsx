@@ -37,22 +37,26 @@ export default function LoginForm({ user, setUser }) {
     setErrors((e) => ({ ...e, form: null }));
 
     try {
-      const res = await axios.post("http://localhost:3000/auth/login", form);
+      const res = await axios.post("http://localhost:3001/auth/login", form);
       //FIXME^ / see ab this
-      if (res?.data?.user) {
-        setUser(res.data.user);
+      if (res?.data) {
+        setUser(res.data);
+        setIsProcessing(false);
+        navigate("/portal");
         console.log("in if 1");
       } else {
         setErrors((e) => ({
           ...e,
           form: "Invalid username/password combination",
         }));
+        setIsProcessing(false);
       }
     } catch (err) {
       console.log(err);
+      const message = err?.response?.data?.error?.message;
       setErrors((e) => ({
         ...e,
-        form: "Invalid username/password combination",
+        form: message ? String(message) : String(err),
       }));
     } finally {
       setIsProcessing(false);

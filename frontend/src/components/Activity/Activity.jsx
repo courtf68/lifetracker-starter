@@ -5,9 +5,21 @@ export default function Activity() {
     <div className="content">
       <div className="top">
         <h1>Activity Feed</h1>
-        <button id="orange">Add Exercise</button>
-        <button id="purombre"> Log Sleep</button>
-        <button id="turq"> Record Nutrition</button>
+        <button id="orange">
+          <a id="butO" href="/exercise">
+            Add Exercise
+          </a>
+        </button>
+        <button id="purombre">
+          <a id="butP" href="/sleep">
+            Log Sleep
+          </a>
+        </button>
+        <button id="turq">
+          <a id="butT" href="/nutrition">
+            Record Nutrition
+          </a>
+        </button>
       </div>
       <div>
         <div className="stats">

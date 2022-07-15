@@ -8,11 +8,11 @@ export default function Sleep() {
         <div className="top">
           <h2>Overview</h2>
           <button className="left" id="purombre">
-            Add Sleep
+            <a href="/sleep/add">Add Sleep</a>
           </button>
         </div>
         <div className="sumStat" id="purombreb">
-          <p>Title here</p>
+          <p>Sleep time</p>
         </div>
       </div>
     </div>

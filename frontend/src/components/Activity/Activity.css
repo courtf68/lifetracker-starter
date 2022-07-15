@@ -29,9 +29,14 @@
 }
 
 #purombre {
-  color: plum;
+  color: rgb(111, 51, 231);
   /* actually make ombre lol */
-  border-color: plum;
+  border-color: rgb(226, 63, 251);
+  border: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(199, 70, 252, 1) 100%
+  );
 }
 #orangeb {
   background-color: orange;
@@ -43,7 +48,12 @@
 }
 #purombreb {
   color: aliceblue;
-  background-color: plum;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(199, 70, 252, 1) 100%
+  );
 }
 
 h2 {
@@ -87,4 +97,23 @@ h2 {
 }
 .brightred {
   background-color: crimson;
+}
+
+#butO,
+#butP,
+#butT {
+  text-decoration: none;
+  display: block;
+  /* color: orange; */
+  text-align: center;
+  padding: 16px;
+}
+#butO {
+  color: orange;
+}
+#butP {
+  color: plum;
+}
+#butT {
+  color: turquoise;
 }
