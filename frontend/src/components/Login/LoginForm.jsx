@@ -4,7 +4,7 @@ import axios from "axios";
 import "../Login/LoginForm.css";
 import Navbar from "../Navbar/Navbar";
 
-export default function LoginForm({ user, setUser }) {
+export default function LoginForm({ user }) {
   const navigate = useNavigate();
   const [isProcessing, setIsProcessing] = useState(false);
   const [errors, setErrors] = useState({});
@@ -41,9 +41,9 @@ export default function LoginForm({ user, setUser }) {
       const res = await axios.post("http://localhost:3001/auth/login", form);
       //FIXME^ / see ab this
       if (res?.data) {
-        setUser(res.data.user);
+        // setUser(res.data.user);
         setIsProcessing(false);
-        navigate("/portal");
+        navigate("/activity");
         <Navbar>
           <div>
             <p>logged in</p>
