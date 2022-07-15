@@ -13,6 +13,9 @@ export default function Exercise() {
             Add Exercise
           </button>
         </div>
+        <div className="sumStat" id="orangeb">
+          <p>Title here</p>
+        </div>
       </div>
     </div>
   );
