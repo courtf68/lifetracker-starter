@@ -12,7 +12,7 @@ export default function Sleep() {
           </button>
         </div>
         <div className="sumStat" id="purombreb">
-          <p>Sleep time</p>
+          <p id="larger">Sleep time</p>
         </div>
       </div>
     </div>

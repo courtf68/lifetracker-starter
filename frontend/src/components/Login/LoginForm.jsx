@@ -41,7 +41,7 @@ export default function LoginForm({ user, setUser }) {
       const res = await axios.post("http://localhost:3001/auth/login", form);
       //FIXME^ / see ab this
       if (res?.data) {
-        setUser(res.data);
+        setUser(res.data.user);
         setIsProcessing(false);
         navigate("/portal");
         <Navbar>

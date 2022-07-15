@@ -64,14 +64,17 @@ h2 {
   width: 370px;
   height: 220px;
   font-size: 16px;
+  border-radius: 3%;
 }
 .smolStat {
   width: 370px;
   height: 120px;
   font-size: 16px;
+  border-radius: 3%;
 }
 .sumStat p {
   margin-left: 6px;
+  /* font-size: 20px; */
 }
 
 .stats {
@@ -116,4 +119,12 @@ h2 {
 }
 #butT {
   color: turquoise;
+}
+.bolder {
+  font-weight: bolder;
+  font-size: 30px;
+}
+.sumStat p,
+.smolStat p {
+  padding-left: 10px;
 }

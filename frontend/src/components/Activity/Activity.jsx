@@ -26,10 +26,16 @@ export default function Activity() {
           {/* block 1*/}
           <div className="sumStat" id="orangeb">
             <p>Total Exercise Minutes</p>
+            <p className="bolder">
+              <b>1</b>
+            </p>
           </div>
           {/* block 2*/}
           <div className="sumStat" id="purombreb">
             <p>Avg Sleep Hours</p>
+            <p className="bolder">
+              <b>8.6</b>
+            </p>
           </div>
           {/* block 3*/}
           <div className="sumStat" id="turqb">
