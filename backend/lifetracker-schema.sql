@@ -12,3 +12,14 @@ CREATE TABLE sleep (
     endTime TIMESTAMP NOT NULL,
  
 );
+
+CREATE TABLE nutrition (
+    id SERIAL PRIMARY KEY,
+    n_id INTEGER NOT NULL,
+    n_name   TEXT NOT NULL,
+    category TEXT NOT NULL,
+    calories INTEGER NOT NULL,
+    quantity INTEGER NOT NULL,
+    image_url TEXT NOT NULL,
+    FOREIGN KEY (n_id) REFERENCES users(id) ON DELETE CASCADE
+);

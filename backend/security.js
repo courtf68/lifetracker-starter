@@ -1,44 +1,54 @@
-// // const jwt = require("jsonwebtoken");
-// const { SECRET_KEY } = require("./config");
-// const { UnauthorizedError } = require("./utils/error");
+const jwt = require("jsonwebtoken");
+const { SECRET_KEY } = require("./config");
+const { UnauthorizedError } = require("./utils/errors");
 
-// const jwtFrom = ({ headers }) => {
-//   if (headers?.authorization) {
-//     const [scheme, token] = headers.authorization.split(" "); //split
-//     if (scheme.trim() === "Bearer") {
-//       return token;
-//     }
-//   }
-//   return undefined;
-// };
+const jwtFrom = ({ headers }) => {
+  if (headers?.authorization) {
+    console.log(typeof headers.authorization);
+    // spilting the authorization from the scheme to token
+    const [scheme, token] = headers.authorization.split(" ");
+    if (scheme.trim() === "Bearer") {
+      return token;
+    }
+  }
+  return undefined;
+};
 
-// const extractUserFromJwt = (req, res, next) => {
-//   try {
-//     const token = jwtFrom(req);
-//     if (token) {
-//       res.locals.user = jwt.verify(token, SECRET_KEY); //verify
-//     }
-//     return next();
-//   } catch (err) {
-//     return next();
-//   }
-// };
+const extractUserFromJwt = (req, res, next) => {
+  try {
+    const token = jwtFrom(req);
+    if (token) {
+      console.log("My token is:" + token);
+      res.locals.user = jwt.verify(token, SECRET_KEY);
+      // verifing if it is a valid token , if so will attach it to local user
+    }
+    console.log(res.locals.user);
+    return next();
+  } catch (error) {
+    console.log(error);
+    return next();
+  }
+};
 
-// const requireAuthenticatedUser = (req, res, next) => {
-//   try {
-//     const { user } = res.locals;
-//     if (!user?.email) {
-//       throw new UnauthorizedError();
-//     }
-//   } catch (err) {
-//     return next(err);
-//   }
-// };
+// verfiy an authed user exists
+const requireAuthenticatedUser = (req, res, next) => {
+  try {
+    const { user } = res.locals;
+    console.log(user);
+    if (!user?.email) {
+      throw new UnauthorizedError();
+    }
+    return next();
+  } catch (error) {
+    return next(error);
+  }
+};
 
-// module.exports = {
-//   requireAuthenticatedUser,
-//   extractUserFromJwt,
-// };
+module.exports = {
+  requireAuthenticatedUser,
+  extractUserFromJwt,
+  jwtFrom,
+};
 
 const bcrypt = require("bcrypt");
 
