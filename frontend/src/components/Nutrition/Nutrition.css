@@ -7,3 +7,52 @@
   background-color: cadetblue;
   color: aliceblue;
 }
+
+.n a {
+  text-decoration: none;
+  display: block;
+  color: turquoise;
+  text-align: center;
+  padding: 16px;
+}
+
+.n h2 {
+  padding-right: 800px;
+}
+.n .form {
+  /* align-items: center;
+  align-content: center; */
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  /* flex-direction: column; */
+}
+.n .form input {
+  padding: 10px;
+}
+
+.n .form button {
+  /* padding: 8px; */
+  width: 15%;
+}
+.addNutrition h2 {
+  align-items: center;
+  /* padding-left: 600px; */
+}
+
+.n .form a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  /* padding: 16px; */
+  font-size: 20px;
+}
+
+#larger {
+  font-size: 20px;
+}
+
+.InputField {
+  padding: 10px;
+}

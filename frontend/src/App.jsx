@@ -18,7 +18,7 @@ import Activity from "./components/Activity/Activity";
 import Exercise from "./components/Exercise/Exercise";
 import Sleep from "./components/Sleep/Sleep";
 import SleepForm from "./components/Sleep/SleepForm";
-
+import NutritionForm from "./components/Nutrition/NutritionForm";
 function App() {
   return (
     <BrowserRouter>
@@ -48,6 +48,7 @@ function App() {
         <Route path="/sleep" element={<Sleep />} />
         <Route path="/sleep/add" element={<SleepForm />} />
         <Route path="/nutrition" element={<NutritionPage />} />
+        <Route path="/nutrition/add" element={<NutritionForm />} />
       </Routes>
 
       <>

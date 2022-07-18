@@ -1,17 +1,16 @@
 const express = require("express");
 const router = express.Router();
-
+const security = require("../security");
 const User = require("../models/user");
 
-// const security = require("../security");
-// const { createUserJwt } = require("../utils/tokens");
+const { createUserJwt } = require("../utils/tokens");
 
 router.post("/login", async (req, res, next) => {
   try {
     const user = await User.login(req.body);
-    // const token = createUserJwt(user);
+    const token = createUserJwt(user);
 
-    return res.status(200).json({ user }); //put token back in
+    return res.status(200).json({ user, token }); //put token back in
   } catch (err) {
     next(err);
   }
@@ -19,8 +18,19 @@ router.post("/login", async (req, res, next) => {
 router.post("/register", async (req, res, next) => {
   try {
     const user = await User.register(req.body);
-    // const token = createUserJwt(user);
-    return res.status(201).json({ user }); //,token
+    const token = createUserJwt(user);
+    return res.status(201).json({ user, token }); //,token
+  } catch (err) {
+    next(err);
+  }
+});
+router.get("/me", security.requireAuthenticatedUser, async (req, res, next) => {
+  try {
+    const { email } = res.locals.user;
+    const user = await User.fetchUserByEmail(email);
+
+    const publicUser = User.makePublicUser(user);
+    return res.status(200).json({ user: publicUser });
   } catch (err) {
     next(err);
   }
@@ -28,6 +38,13 @@ router.post("/register", async (req, res, next) => {
 router.post("./sleep/add", async (req, res, next) => {
   try {
     console.log("adding sleep");
+  } catch (err) {
+    next(err);
+  }
+});
+router.post("./nutrition/add", async (req, res, next) => {
+  try {
+    console.log("adding nutrition");
   } catch (err) {
     next(err);
   }

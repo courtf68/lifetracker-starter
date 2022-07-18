@@ -16,6 +16,7 @@ app.use(cors()); //remember func
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(security.extractUserFromJwt);
+
 app.use("/auth", auth);
 app.use("/nutrition", nRouter);
 
