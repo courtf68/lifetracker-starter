@@ -14,6 +14,7 @@ class ApiClient {
 
   async request(endpoint, method = `GET`, data = {}) {
     const url = `${this.remoteHostUrl}/${endpoint}`;
+
     const headers = {
       "Content-Type": "application/json",
     };

@@ -13,23 +13,23 @@ class Nutrition {
   }
   static async PostNutrition(nCreds, userId) {
     console.log(nCreds);
-    if (nCreds.name.length === 0) {
+    if (nCreds.name === "") {
       throw new BadRequestError("No name here");
     }
 
-    if (nCreds.category.length === 0) {
+    if (nCreds.category === "") {
       throw new BadRequestError("Need a nutrition category ");
     }
 
-    if (nCreds.image.length === 0) {
+    if (nCreds.image === "") {
       throw new BadRequestError("Need to input url");
     }
 
-    if (nCreds.quantity === 0) {
+    if (nCreds.quantity === "") {
       throw new BadRequestError("Nutrition quantity can't be zero");
     }
 
-    if (nCreds.calories === 0) {
+    if (nCreds.calories === "") {
       throw new BadRequestError("Nutrition calories can't be zero");
     }
     const result = await db.query(

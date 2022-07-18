@@ -30,6 +30,7 @@ export default function NutritionForm({}) {
 
     try {
       const res = await apiClient.request("nutrition", "post", form);
+      console.log(res);
       // const res = await axios.post("http://localhost:3001/nutrition/add", {
       //     name: form.name,
 
@@ -48,7 +49,7 @@ export default function NutritionForm({}) {
       } else {
         setErrors((e) => ({
           ...e,
-          form: "Something went wrong with registration",
+          form: "Something went wrong " + e,
         }));
         setIsLoading(false);
       }

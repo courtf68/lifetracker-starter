@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../Login/LoginForm.css";
 import Navbar from "../Navbar/Navbar";
+import apiClient from "../../../apiClient";
 
 export default function LoginForm({ user }) {
   const navigate = useNavigate();
@@ -43,7 +44,12 @@ export default function LoginForm({ user }) {
       if (res?.data) {
         // setUser(res.data.user);
         setIsProcessing(false);
+        apiClient.setToken(res.data.token);
+        console.log(res.data);
+        // window.localStorage.setItem(token, "token");
+
         navigate("/activity");
+
         <Navbar>
           <div>
             <p>logged in</p>
