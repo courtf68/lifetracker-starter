@@ -61,14 +61,18 @@ export default function RegisterForm() {
     }
 
     try {
-      const res = await axios.post("http://localhost:3001/auth/register", {
-        email: form.email,
-        username: form.username,
-        firstName: form.firstName,
-        lastName: form.lastName,
-        // email: form.email,
-        password: form.password,
-      });
+      const res = await axios.post(
+        "https://lifetracker-courtcourt.herokuapp.com/",
+        {
+          // http://localhost:3001/auth/register
+          email: form.email,
+          username: form.username,
+          firstName: form.firstName,
+          lastName: form.lastName,
+          // email: form.email,
+          password: form.password,
+        }
+      );
 
       if (res?.data?.user) {
         // setAppState(res.data);

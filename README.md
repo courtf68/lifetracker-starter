@@ -4,9 +4,8 @@
 
 Submitted by: Courtney
 
-Deployed Application: [Lifetracker Deployed Site](https://cloudy-person.surge.sh/)
-
-- ^older version, please see my video or local host as well for current version
+Deployed Application: [Lifetracker Deployed Site](https://lifetracker-cf.surge.sh/)
+https://lifetracker-courtcourt.herokuapp.com - backend deployment
 
 ## Application Features
 
@@ -27,9 +26,9 @@ Deployed Application: [Lifetracker Deployed Site](https://cloudy-person.surge.sh
 
 **Detailed Activity Page:**
 
-- [ ] The detailed activity page should display a feed of all previous tracked activities.
-- [ ] The detailed activity should contain a form to contain relevant information. (i.e if tracking nutrition this form allows the user to capture calories, timestamp, image, category, etc.)
-- [ ] The activity tracked should be given a unique id for easy lookup.
+- [x] The detailed activity page should display a feed of all previous tracked activities.
+- [x] The detailed activity should contain a form to contain relevant information. (i.e if tracking nutrition this form allows the user to capture calories, timestamp, image, category, etc.)
+- [x] The activity tracked should be given a unique id for easy lookup.
       `TODO://` Add link to table schema in the link code below. Your file should end in `.sql` and show your schema for the detailed activities table. (🚫 Remove this paragraph after adding schema link)
   - [Table Schema](📝ADD LINK TO TABLE SCHEMA.sql HERE!)
 
@@ -44,23 +43,22 @@ Implement any of the following features to improve the application:
 
 ### Walkthrough Video
 
-<div style="position: relative; padding-bottom: 55.46875%; height: 0;"><iframe src="https://www.loom.com/embed/8cb2cab23b5e498ea92c6e9d4d47ef88" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
-`<div style="position: relative; padding-bottom: 55.46875%; height: 0;"><iframe src="https://www.loom.com/embed/8cb2cab23b5e498ea92c6e9d4d47ef88" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>`
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/2b043e9c2a42457ebaf01e5ab1403bf1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Yes however I did not feel prepared to do everything on the backend such as making new cards.
+Yes however I did not feel prepared to do everything on the backend such as connecting to new cards.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-I plan to complete more backend features and I would've liked to change the login/logout button.
+I would've liked to complete more backend features and I would've liked to change the login/logout button.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
 Showing my front end design/features went well. I would like to add more interactive components next time.
+Other notes: my backend fully works now
 
 ### Open-source libraries used
 

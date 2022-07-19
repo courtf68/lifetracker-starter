@@ -29,7 +29,8 @@ export default function NutritionForm({}) {
     setErrors((e) => ({ ...e, form: null }));
 
     try {
-      const res = await apiClient.request("nutrition", "post", form);
+      const res = await apiClient.listNutrition(form);
+
       console.log(res);
       // const res = await axios.post("http://localhost:3001/nutrition/add", {
       //     name: form.name,
@@ -120,7 +121,7 @@ export default function NutritionForm({}) {
             </div>
 
             <div className="input-field">
-              <label htmlFor="image_url">ImageUrl</label>
+              <label htmlFor="image_url">image_url</label>
               <input
                 type="image_url"
                 name="image_url"

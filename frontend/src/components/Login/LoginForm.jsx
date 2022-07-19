@@ -39,8 +39,11 @@ export default function LoginForm({ user }) {
     setErrors((e) => ({ ...e, form: null }));
 
     try {
-      const res = await axios.post("http://localhost:3001/auth/login", form);
-      //FIXME^ / see ab this
+      const res = await axios.post(
+        "https://lifetracker-courtcourt.herokuapp.com/",
+        form
+      );
+      //http://localhost:3001/auth/login
       if (res?.data) {
         // setUser(res.data.user);
         setIsProcessing(false);

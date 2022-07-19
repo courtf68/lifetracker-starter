@@ -12,7 +12,7 @@ class ApiClient {
     localStorage.setItem(this.tokenName, token);
   }
 
-  async request(endpoint, method = `GET`, data = {}) {
+  async request({ endpoint, method = `GET`, data = {} }) {
     const url = `${this.remoteHostUrl}/${endpoint}`;
 
     const headers = {
@@ -45,6 +45,15 @@ class ApiClient {
     return await this.request({ endpoint: `nutrition/add`, method: `GET` });
   }
 
+  async listNutrition(form) {
+    //add form
+    return await this.request({
+      endpoint: `nutrition`,
+      method: `POST`,
+      data: form,
+    });
+  }
+
   async createPost(data, point) {
     return await this.request({
       endpoint: point + `/`,
@@ -70,4 +79,4 @@ class ApiClient {
   }
 }
 
-export default new ApiClient("http://localhost:3001");
+export default new ApiClient("https://lifetracker-courtcourt.herokuapp.com/");

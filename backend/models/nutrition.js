@@ -21,11 +21,11 @@ class Nutrition {
       throw new BadRequestError("Need a nutrition category ");
     }
 
-    if (nCreds.image === "") {
+    if (nCreds.image_url === "") {
       throw new BadRequestError("Need to input url");
     }
 
-    if (nCreds.quantity === "") {
+    if (nCreds.Quantity === "") {
       throw new BadRequestError("Nutrition quantity can't be zero");
     }
 
@@ -48,9 +48,10 @@ class Nutrition {
       [
         nCreds.name,
         nCreds.category,
-        nCreds.quantity,
+
         nCreds.calories,
-        nCreds.image,
+        nCreds.Quantity,
+        nCreds.image_url,
         userId,
       ]
     );
